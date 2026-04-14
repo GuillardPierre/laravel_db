@@ -12,4 +12,9 @@ class Order extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function orderable()
+    {
+        return $this->morphTo();
+    }
 }
